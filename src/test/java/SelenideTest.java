@@ -1,3 +1,4 @@
+
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +12,7 @@ public class SelenideTest {
     @Test
     void shouldTest1() {
         open("http://localhost:9999");
-        $("[data-test-id=name] input").setValue("Анатолий");
+        $("[data-test-id=name] input").setValue("Алексей");
         $("[data-test-id=phone] input").setValue("+79999999999");
         $("[data-test-id=agreement]").click();
         $("button").click();
@@ -20,7 +21,7 @@ public class SelenideTest {
     @Test
     void shouldTestNotClickAgreement() {
         open("http://localhost:9999");
-        $("[data-test-id=name] input").setValue("Анатолий");
+        $("[data-test-id=name] input").setValue("Алексей");
         $("[data-test-id=phone] input").setValue("+79999999999");
         //  $("[data-test-id=agreement]").click();
         $("button").click();
@@ -29,7 +30,7 @@ public class SelenideTest {
     @Test
     void shouldTestInvalidNumber() {
         open("http://localhost:9999");
-        $("[data-test-id=name] input").setValue("Анатолий");
+        $("[data-test-id=name] input").setValue("Алексей");
         $("[data-test-id=phone] input").setValue("9999999999");
         $("[data-test-id=agreement]").click();
         $("button").click();
@@ -39,7 +40,7 @@ public class SelenideTest {
     @Test
     void shouldTestInvalidName() {
         open("http://localhost:9999");
-        $("[data-test-id=name] input").setValue("Anatoly");
+        $("[data-test-id=name] input").setValue("Aeksey");
         $("[data-test-id=phone] input").setValue("+79999999999");
         $("[data-test-id=agreement]").click();
         $("button").click();
@@ -59,7 +60,7 @@ public class SelenideTest {
     @Test
     void shouldTestEmptyNumber() {
         open("http://localhost:9999");
-        $("[data-test-id=name] input").setValue("Анатолий");
+        $("[data-test-id=name] input").setValue("Алексей");
         $("[data-test-id=phone] input").setValue("");
         $("[data-test-id=agreement]").click();
         $("button").click();
